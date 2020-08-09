@@ -14,8 +14,8 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
+        <div class="row my-5">
+            <div class="col-12 text-center bg-info rounded">
                 <h1 id="title">Survey Form Project</h1>
                 <p id="description"><u>Thank you for testing out my Survey Form Project</u></p>
                 <form id="survey-form" action="">
@@ -31,12 +31,12 @@
                     </div> <!-- End of Email Input-->
                     <!-- Age Input -->
                     <div class="form-gruop">
-                        <label id="number-label" for="">Enter a Age <em>(optional)</em></label>
-                        <input type="text" name="age" id="age" class="form-control" placeholder="Enter your age" min="13" max="99">
+                        <label id="number-label" for="age">Enter a Age <em>(optional)</em></label>
+                        <input type="number" name="age" id="number" class="form-control" placeholder="Enter your age" min="13" max="99">
                     </div> <!-- End of Age Input -->
                     <!-- Language Dropdown Input -->
                     <div class="form-group">
-                        <label for="" id="dropdown-label">What language do you perfer</label>
+                        <label for="language" id="dropdown-label">What language do you perfer</label>
                         <select name="language" id="dropdown" class="form-control" required>
                             <option disabled selected value>Select Language</option>
                             <option value="">JavaScript</option>
@@ -44,27 +44,44 @@
                             <option value="">Swfit</option>
                         </select>
                     </div> <!-- End of Language Dropdown input -->
-                    <!-- Checkbox of Experience -->
-                    <div class="form-group">
-                        <label for="" id="experience-label">What level of Experience do you have?</label>
+                    <!-- Perferred Place to work -->
+                    <div class="form-check">
+                        <label for="" id="location-label">Where would you perfer to work?</label>
                         <section>
+                            <input type="checkbox" value="" id="Home" class="form-check-input"> Home
+                            <br>
+                            <input type="checkbox" value="" id="Office" class="form-check-input"> Office
+                        </section>
+                    </div> <!-- End of Perferred Place -->
+                    <!-- Radio of Experience -->
+                    <div class="form-group">
+                        <label for="experience" id="experience-label">What level of Experience do you have?</label>
+                        <section class="col-3 mx-auto text-left">
                             <!-- Beginner -->
                             <div class="form-check">
-                                <input type="text" name="experience-radio" id="beginner-input" value="beginner" class="form-check-input">
+                                <input type="radio" name="experience-radio" id="beginner-input" value="beginner" class="form-check-input">
                                 <label for="beginner-radio" class="form-check-label">Beginner</label>
                             </div>
                             <!-- Moderate -->
                             <div class="form-check">
-                                <input type="text" name="experience-radio" id="moderate-input" value="moderate" class="form-check-input">
+                                <input type="radio" name="experience-radio" id="moderate-input" value="moderate" class="form-check-input">
                                 <label for="moderate-radio" class="form-check-label">Moderate Understanding</label>
                             </div>
                             <!-- Expert -->
                             <div class="form-check">
-                                <input type="text" name="experience-radio" id="expert-input" value="expert" class="form-check-input">
+                                <input type="radio" name="experience-radio" id="expert-input" value="expert" class="form-check-input">
                                 <label for="expert-radio" class="form-check-label">Expert</label>
                             </div>
                         </section>
-                    </div> <!-- End of Checkbox Experience Section -->
+                    </div> <!-- End of Radio Experience Section -->
+                    <!-- More information -->
+                    <div class="form-group">
+                        <h5 id="comment-label">Anything else you will like to know about us?</h5>
+                        <textarea name="comments" id="comments" class="input-textarea" 
+                        placeholder="Enter here..." cols="80" rows="10"></textarea>
+                    </div> <!-- End of More information -->
+                    <!-- Submit Button -->
+                    <div class="form-group"><button id="submit" class="btn btn-primary">Submit</button></div>
                 </form>
             </div>
         </div>
